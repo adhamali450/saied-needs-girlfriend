@@ -1,0 +1,24 @@
+@import '../../common'
+
+.contact
+    +flex(start, stretch, column, 1.5rem)
+    .contact-mean
+        .seperator
+            margin: 0 0 0.25rem 0
+    .social-media
+        +flex(start, center, row, 0.5rem)
+    #form
+        font-size: 75%
+        max-width: 700px
+        .text-field, .text-area
+            margin-bottom: 0.5rem
+        .text-area
+            align-self: stretch
+        .checkbox
+            width: fit-content
+        .btn
+            margin-top: 0.5rem
+            justify-self: end
+            width: fit-content
+        *
+            font-size: inherit

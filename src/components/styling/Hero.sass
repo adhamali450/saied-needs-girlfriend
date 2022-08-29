@@ -1,0 +1,49 @@
+@import '../../common'
+
+.hero
+    position: relative
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    .decoration
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        .decoration__glow, .decoration__img
+            position: absolute
+            top: 0
+            right: 0
+        .decoration__img
+            transform: rotate(180deg)
+    .hero__content
+        padding: 0 0 2rem 0
+        +flex(start, start, column, 0.5rem)
+        .hero__content__title
+            #br2
+                display: none
+
+@media screen and (max-width: 481px)
+    .decoration__glow
+        top: -30% !important
+    .decoration__img
+        +size(400px, auto)
+        transform: rotate(180deg) translate(-50%, 0) !important
+        right: 50% !important
+
+@media screen and (min-width: 481px)
+    .decoration__img
+        +size(400px, auto)
+
+@media screen and ( max-width: 750px)
+    .hero .hero__content .hero__content__title #br2
+        display: block
+
+@media screen and (min-width: 1117px)
+    .decoration__glow
+        +size(414px, auto)
+    .decoration__img
+        +size(558px, auto)

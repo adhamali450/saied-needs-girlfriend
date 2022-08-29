@@ -1,0 +1,18 @@
+@import '../../_common'
+
+footer
+    position: relative
+    height: 150px
+    overflow: hidden
+    span
+        +absolute-center()
+    img
+        position: absolute
+    #right
+        transform: translate(0, -50%) rotate(-44deg)
+        top: 50%
+        right: -5%
+    #left
+        transform: translate(0, -50%) scaleX(-1) rotate(-44deg)
+        top: 50%
+        left: -5%

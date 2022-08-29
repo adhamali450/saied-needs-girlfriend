@@ -1,0 +1,62 @@
+// variables and mixins
+
+$primary-blue: #64D1F8
+$primary-pink: #FF5B8C
+$gray: #1F1F1F
+
+// typescales
+=perfect-fourth()
+    font-size: 27px
+    h1
+        font-size: 4.209rem
+    h2
+        font-size: 3.157rem
+    span
+        font-size: 0.8rem
+=major-third()
+    font-size: 22px
+    h1
+        font-size: 3.157rem
+    h2
+        font-size: 2.441rem
+=minor-third()
+    h1
+        font-size: 3.157rem
+    h2
+        font-size: 2.074rem
+
+// generic mixins
+=min-size($min-width, $min-height)
+    min-width: $min-width
+    min-height: $min-height
+
+=max-size($max-width, $max-height)
+    max-width: $max-width
+    max-height: $max-height
+
+=size($width, $height)
+    width: $width
+    height: $height
+
+=absolute-center()
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+=grid-center()
+    display: grid
+    place-items: center
+
+=flex($justify-centent: start, $align-items: start, $flex-direction: row, $grid-gap: 0rem)
+    display: flex
+    justify-content: $justify-centent
+    align-items: $align-items
+    flex-direction: $flex-direction
+    grid-gap: $grid-gap
+
+=absolute-cover()
+    position: absolute
+    top: 0
+    left: 0
+    +size(100%, 100%)

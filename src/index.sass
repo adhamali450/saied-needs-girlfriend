@@ -1,0 +1,38 @@
+//normalization
+*, *::before, *::after
+    margin: 0
+    padding: 0
+
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+    overflow-x: hidden
+
+    outline: none
+
+//disable semi-blue highlight on mobile
+.no-highlight
+    -webkit-tap-highlight-color: transparent
+
+*::moz-focus-inner
+    border: 0
+
+html
+    width: 100vw
+    height: -webkit-fill-available
+
+body
+    width: 100vw
+    height: 100vh
+
+    min-height: 100vh
+    min-height: -webkit-fill-available
+
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+ul
+    list-style-type: none
+
+a
+    color: inherit

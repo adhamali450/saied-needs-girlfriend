@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import glowRed from "./assets/glow-red.png";
+import heroRed from "./assets/saied-red.png";
+import Hero from "./components/Sections/Hero";
+import About from "./components/Sections/About";
+import Contact from "./components/Sections/Contact";
+import Footer from "./components/Sections/Footer";
+import "./App.sass";
+import { Fragment } from "react";
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+     primary: {
+      main: "#64D1F8",
+    },
+    secondary: {
+      main: "#FF5B8C",
+    },
+  },
+});
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <main>
+        <Hero />
+        <About />
+        <Contact/>
+        <Footer/>
+      </main>
+    </ThemeProvider>
+    
   );
 }
 
