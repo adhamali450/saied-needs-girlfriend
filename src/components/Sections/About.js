@@ -15,9 +15,11 @@ function About() {
       <article>
         <p className="about__text">
           Saied is a spectacular youngman, father of 2 beautiful kittens and a
-          heavy emoji user. He loves <strong>basketball</strong> 🏀,
-          <strong>marshal arts</strong>{" "}
-          🥋, <strong>cosplaying</strong> 🎀 and <strong>film-making</strong> 🎥 .
+          heavy emoji user. He loves 
+          <strong>basketball</strong> 🏀, {" "}
+          <strong>marshal arts</strong> 🥋, {" "} 
+          <strong>cosplaying</strong> 🎀 and {" "} 
+          <strong>film-making</strong> 🎥.
         </p>
         <p className="about__text">
           Due to his <strong>increase in testosterone</strong> 😔 and after

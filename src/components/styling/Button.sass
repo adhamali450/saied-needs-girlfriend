@@ -10,8 +10,10 @@
     img
         +size(1rem, 1rem)
     &:hover
+        color: inherit
         background-color: darken($primary-pink, 5%)
     &:active
+        color: inherit
         background-color: darken($primary-pink, 10%)
     &:disabled
         cursor: not-allowed
@@ -35,6 +37,7 @@
     background-color: $gray
     +flex(center, center, column-reverse, 0.75rem)
     +size(220px, 180px)
+    padding: 1rem
     img
         +size(35px, 35px)
     &:hover

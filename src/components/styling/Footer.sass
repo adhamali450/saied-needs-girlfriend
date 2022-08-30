@@ -4,15 +4,54 @@ footer
     position: relative
     height: 150px
     overflow: hidden
-    span
-        +absolute-center()
-    img
+    *
         position: absolute
+    small
+        transform: translate(-50%, -50%)
+        top: 50%
+        left: 50%
     #right
         transform: translate(0, -50%) rotate(-44deg)
-        top: 50%
-        right: -5%
+        top: 60%
+        right: -7%
     #left
         transform: translate(0, -50%) scaleX(-1) rotate(-44deg)
-        top: 50%
-        left: -5%
+        top: 60%
+        left: -7%
+
+@media screen and (max-width: 768px)
+    footer
+        img
+            +size(270px, auto)
+        #right
+            top: 65%
+            right: -9%
+        #left
+            top: 65%
+            left: -9%
+
+@media screen and (max-width: 570px)
+    footer
+        small
+            top: 65%
+        img
+            +size(200px, auto)
+        #right
+            top: 68%
+            right: -12%
+        #left
+            top: 68%
+            left: -12%
+
+@media screen and (max-width: 390px)
+    footer
+        small
+            top: 65%
+        img
+            +size(170px, auto)
+        #right
+            top: 68%
+            right: -15%
+        #left
+            top: 68%
+            left: -15%

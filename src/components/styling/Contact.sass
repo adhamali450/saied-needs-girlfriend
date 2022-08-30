@@ -15,10 +15,24 @@
         .text-area
             align-self: stretch
         .checkbox
+            font-size: 150%
             width: fit-content
+            .checkbox-label
+                font-size: 70%
         .btn
             margin-top: 0.5rem
             justify-self: end
             width: fit-content
         *
             font-size: inherit
+
+@media screen and (max-width: 480px)
+    .contact
+        .social-media
+            .btn
+                height: auto
+                span
+                    display: none !important
+        #form
+            .btn
+                width: 100%

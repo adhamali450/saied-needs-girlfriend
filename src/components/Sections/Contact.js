@@ -36,18 +36,18 @@ function About() {
           <FormControlLabel className="checkbox"
             control={<Checkbox />} 
             label={
-              <span>
+              <span className="checkbox-label">
                 I'm above the age of <a target="_blank" href="https://www.law.cornell.edu/wex/age_of_majority">legal majority</a>
               </span>
             } />
           <FormControlLabel  className="checkbox"
-            control={<Checkbox />} 
+            control={<Checkbox/>} 
             label={
-              <span>
+              <span className="checkbox-label">
                 I agree to the <a href="#">terms and conditions</a>
               </span>
             } />
-          <Button text="Book a date"/>
+          <Button id="btn-submit" text="Book a date"/>
         </FormGroup>
       </div>
 

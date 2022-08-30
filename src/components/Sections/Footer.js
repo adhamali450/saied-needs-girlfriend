@@ -5,7 +5,7 @@ function Footer(){
     return (
         <footer>
             <img id="left" src={saiedSitting}/>
-            <span>Would you let him down ?</span>
+            <small>Would you let him down ?</small>
             <img id="right" src={saiedSitting}/>
         </footer>
     )

@@ -33,6 +33,14 @@ h2+span
     display: inline-block
     margin-top: -0.25rem
 
+a
+    color: #fff
+    transition: color 0.2s ease-in-out
+    &:hover
+        color: $primary-pink
+    &:active
+        color: darken($primary-pink, 10%)
+
 @media screen and (max-width: 481px)
     html
         +minor-third()
