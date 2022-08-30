@@ -19,7 +19,7 @@ function Hero() {
           <br id="br2"/>
           girlfriend
         </h1>
-        <Button icon={chevronRight} href="#contact" type="glyph-btn" alt="contact saied"/>
+        <Button icon={chevronRight} href="#contact" varient="glyph-btn" alt="contact saied"/>
         </div>
     </section>
   );

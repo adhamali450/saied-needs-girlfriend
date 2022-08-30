@@ -4,6 +4,7 @@
     +flex(center, center, row, 0.5rem)
     background-color: $primary-pink
     border-radius: 999px
+    border: none
     cursor: pointer
     text-decoration: none
     transition: background-color 0.2s ease-in-out
@@ -16,8 +17,9 @@
         color: inherit
         background-color: darken($primary-pink, 10%)
     &:disabled
-        cursor: not-allowed
-        opacity: 0.65
+        pointer-events: none
+        color: #fff
+        opacity: 0.45
 
 .default
     padding: 0.55rem 1.5rem

@@ -10,18 +10,14 @@
     #form
         font-size: 75%
         max-width: 700px
-        .text-field, .text-area
-            margin-bottom: 0.5rem
-        .text-area
-            align-self: stretch
+        +flex(start, stretch, column, 0.5rem)
         .checkbox
             font-size: 150%
             width: fit-content
             .checkbox-label
                 font-size: 70%
         .btn
-            margin-top: 0.5rem
-            justify-self: end
+            align-self: flex-end
             width: fit-content
         *
             font-size: inherit

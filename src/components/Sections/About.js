@@ -15,7 +15,7 @@ function About() {
       <article>
         <p className="about__text">
           Saied is a spectacular youngman, father of 2 beautiful kittens and a
-          heavy emoji user. He loves 
+          heavy emoji user. He loves {" "}
           <strong>basketball</strong> 🏀, {" "}
           <strong>marshal arts</strong> 🥋, {" "} 
           <strong>cosplaying</strong> 🎀 and {" "} 
