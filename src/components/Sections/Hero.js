@@ -8,8 +8,8 @@ function Hero() {
   return (
     <section className="hero">
       <div className="decoration">
-        <img className="decoration__glow" src={glowRed} />
-        <img className="decoration__img" src={heroRed} />
+        <img className="decoration__glow" src={glowRed} alt=""/>
+        <img className="decoration__img" src={heroRed} alt=""/>
       </div>
       <div className="hero__content container">
         <h1 className="hero__content__title">

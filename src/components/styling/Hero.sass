@@ -5,7 +5,9 @@
     height: 100vh
     display: flex
     flex-direction: column
-    justify-content: flex-end
+    justify-content: center
+    *
+        // outline: 2px dashed green
     .decoration
         position: absolute
         top: 0
@@ -26,24 +28,32 @@
             #br2
                 display: none
 
-@media screen and (max-width: 481px)
-    .decoration__glow
-        top: -30% !important
-    .decoration__img
-        +size(400px, auto)
-        transform: rotate(180deg) translate(-50%, 0) !important
-        right: 50% !important
+@media screen and (max-width: 550px)
+    .hero .decoration
+        .decoration__glow
+            top: -20% !important
+        .decoration__img
+            +size(400px, auto)
+            transform: rotate(180deg) !important
+            right: -15% !important
 
-@media screen and (min-width: 481px)
-    .decoration__img
-        +size(400px, auto)
+@media screen and (max-width: 390px)
+    .hero .decoration
+        .decoration__img
+            +size(350px, auto)
+
+@media screen and (min-width: 550px)
+    .hero .decoration
+        .decoration__img
+            +size(400px, auto)
 
 @media screen and ( max-width: 768px)
     .hero .hero__content .hero__content__title #br2
         display: block
 
 @media screen and (min-width: 1117px)
-    .decoration__glow
-        +size(414px, auto)
-    .decoration__img
-        +size(558px, auto)
+    .hero .decoration
+        .decoration__glow
+            +size(414px, auto)
+        .decoration__img
+            +size(558px, auto)

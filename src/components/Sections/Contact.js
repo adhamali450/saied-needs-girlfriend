@@ -27,9 +27,9 @@ function About() {
       <div className="casual contact-mean">
         <Seperator text="Casual queen" />
         <div className="social-media">
-          <Button text="Messenger" icon={iconMessenger} varient="contact-btn" target="_blank" href="#"/>
-          <Button text="Whatsapp" icon={iconWhatsapp} varient="contact-btn" target="_blank" href="#"/>
-          <Button text="Twitter" icon={iconTwitter} varient="contact-btn" target="_blank" href="#"/>
+          <Button text="Messenger" icon={iconMessenger} varient="contact-btn"/>
+          <Button text="Whatsapp" icon={iconWhatsapp} varient="contact-btn"/>
+          <Button text="Twitter" icon={iconTwitter} varient="contact-btn"/>
         </div>
       </div>
 
