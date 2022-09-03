@@ -1,3 +1,4 @@
+import Rating from '@mui/material/Rating';
 import Label from '../Label'
 import iconPersonality from '../../assets/icon-personlaity.svg';
 import iconHome from '../../assets/icon-home.svg';
