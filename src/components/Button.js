@@ -8,7 +8,8 @@ function Button(props){
 
     return(
         <button className={`btn ${varientClass} ${className? className : ""}`} 
-            type={type? type : "button"} disabled={disabled}>
+            type={type? type : "button"} disabled={disabled}
+            onClick={props.onClickHandler}>
             <span style={{display: !text? "none": "inline-block"}}>{text}</span>
             { icon && <img src={icon} alt={alt? alt : ""}/> }
         </button>

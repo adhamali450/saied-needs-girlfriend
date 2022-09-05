@@ -1,0 +1,39 @@
+@import "../../common"
+
+.banner
+    $bg: #2F323A
+    color: #fff
+    overflow: visible
+    position: relative
+    font-size: 80%
+    padding: 0.5rem 1rem 0.5rem 0.5rem
+    width: fit-content
+    background-color: $bg
+    border-radius: 0 20px 20px 0
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: -20%
+        width: 20%
+        height: 100%
+        background-color: $bg
+        border-radius: 20px 0 0 20px
+    .icon-sale
+        position: absolute
+        +size(2.5rem, 2.5rem)
+        transform: translate(-50%, -50%) rotate(-30deg)
+        left: 100%
+    .title
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 0.5rem
+    .content
+        line-height: 100%
+        overflow: hidden
+        margin-bottom: 0.25rem
+    .details
+        display: block
+        line-height: normal
+    .footer
+        font-size: 70%

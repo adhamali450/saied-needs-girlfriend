@@ -18,13 +18,13 @@ function About() {
           Saied is a spectacular youngman, father of 2 beautiful kittens and a
           heavy emoji user. He does {" "}
           <strong>basketball</strong> 🏀, {" "}
-          <strong>marshal arts</strong> 🥋, {" "} 
+          <strong>martial arts</strong> 🥋, {" "} 
           <strong>cosplaying</strong> 🎀 and {" "} 
           <strong>film-making</strong> 🎥.
         </p>
         <p className="about__text">
           Due to his <strong>increase in testosterone</strong> 😔 and after
-          certain events last year, Saied is in a great(disparate) need for a
+          certain events last year, Saied is in a great(desperate) need for a
           girlfriend and you might be the one 🤗.
         </p>
         <p className="about__text">
@@ -42,7 +42,7 @@ function About() {
 
       <div className="about__basic-info">
         <Label src={iconStudies} title="FCIS Ain Shams University" alt="Study"/>
-        <Label src={iconHome} title="Ain Shams, Cairo" alt="Home town"/>
+        <Label src={iconHome} title="Ain Shams Slums, Cairo" alt="Home town"/>
         <Label src={iconPersonality} title="INTP-A Pro Max" alt="Personality"/>
         <Label src={iconBirthday} title="6th June 2001 (BC)" alt="Birthday"/>
       </div>

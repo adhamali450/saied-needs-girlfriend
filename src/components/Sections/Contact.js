@@ -17,6 +17,14 @@ import '../styling/Contact.sass'
 function About() {
   const [legal, setLegel] = useState(false)
 
+  const openUrl = (url) => {
+    window.open(url, '_blank').focus()
+  }
+  const facebook = "https://www.facebook.com/sade.sade.908",
+    twitter = "https://twitter.com/so3da2001",
+    whatsapp = "tel:201094757535";
+
+
   return (
     <section className="contact container" id="contact">
       <header>
@@ -27,9 +35,9 @@ function About() {
       <div className="casual contact-mean">
         <Seperator text="Casual queen" />
         <div className="social-media">
-          <Button text="Messenger" icon={iconMessenger} varient="contact-btn"/>
-          <Button text="Whatsapp" icon={iconWhatsapp} varient="contact-btn"/>
-          <Button text="Twitter" icon={iconTwitter} varient="contact-btn"/>
+          <Button text="Messenger" icon={iconMessenger} varient="contact-btn" onClickHandler={()=> openUrl(facebook)}/>
+          <Button text="Whatsapp" icon={iconWhatsapp} varient="contact-btn"  onClickHandler={()=> openUrl(whatsapp)}/>
+          <Button text="Twitter" icon={iconTwitter} varient="contact-btn"  onClickHandler={()=> openUrl(twitter)}/>
         </div>
       </div>
 
