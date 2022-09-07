@@ -26,7 +26,7 @@ function Hero() {
           <br id="br2"/>
           girlfriend
         </h1>
-        <Button icon={chevronRight} href="#contact" varient="glyph-btn" alt="contact saied" onClickHandler={() => document.body.scrollTo(200, 0)}/>
+        <Button icon={chevronRight} href="#contact" varient="glyph-btn" alt="contact saied"/>
       </div>
       <div className="hero__offer container">
         <Banner 

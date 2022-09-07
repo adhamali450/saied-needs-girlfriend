@@ -1,4 +1,3 @@
-import Rating from '@mui/material/Rating';
 import Label from '../Label'
 import iconPersonality from '../../assets/icon-personlaity.svg';
 import iconHome from '../../assets/icon-home.svg';
@@ -42,7 +41,7 @@ function About() {
 
       <div className="about__basic-info">
         <Label src={iconStudies} title="FCIS Ain Shams University" alt="Study"/>
-        <Label src={iconHome} title="Ain Shams Slums, Cairo" alt="Home town"/>
+        <Label src={iconHome} title="Ain Shams, Cairo" alt="Home town"/>
         <Label src={iconPersonality} title="INTP-A Pro Max" alt="Personality"/>
         <Label src={iconBirthday} title="6th June 2001 (BC)" alt="Birthday"/>
       </div>

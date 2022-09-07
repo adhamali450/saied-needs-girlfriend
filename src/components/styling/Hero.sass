@@ -1,13 +1,15 @@
 @import '../../common'
 
+@keyframes show-banner
+    100%
+        transform: translate(0, 0)
+
 .hero
     position: relative
     height: 100vh
     display: flex
     flex-direction: column
     justify-content: center
-    *
-        // outline: 2px dashed green
     .decoration
         position: absolute
         top: 0
@@ -29,15 +31,9 @@
                 display: none
     .hero__offer
         overflow: visible
-        .footer
-            margin-top: 0.5rem
-            +flex(start, center, row, 5px)
-            flex-wrap: wrap
-            img
-                +size(0.8rem, 0.8rem)
-            .timer
-                font-size: inherit
-                display: inline-block
+        .banner
+            transform: translate(-120%, 0)
+            animation: show-banner 0.7s 0.5s ease-out forwards
 
 @media screen and (max-width: 550px)
     .hero .decoration

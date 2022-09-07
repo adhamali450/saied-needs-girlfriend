@@ -1,0 +1,24 @@
+@import '../../common'
+
+#form
+    font-size: 75%
+    max-width: 700px
+    +flex(start, stretch, column, 0.5rem)
+    .text-field, .text-area
+        p // helper text
+            font-size: 70%
+    .checkbox
+        font-size: 150%
+        width: fit-content
+        .checkbox-label
+            font-size: 70%
+    .btn
+        align-self: flex-end
+        width: fit-content
+    *
+        font-size: inherit
+
+@media screen and (max-width: 480px)
+    #form
+        .btn
+            width: 100%

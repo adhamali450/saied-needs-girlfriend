@@ -1,65 +1,93 @@
-import { useState } from 'react';
+import React, { useState } from "react";
 
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import TextField from '@mui/material/TextField';
-import Checkbox from '@mui/material/Checkbox';
+import Form from "../Form";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 import Button from "../Button";
 import Seperator from "../Seperator";
 
-import iconTwitter from '../../assets/icon-twitter.svg';
-import iconWhatsapp from '../../assets/icon-whatsapp.svg';
-import iconMessenger from '../../assets/icon-messenger.svg';
+import iconTwitter from "../../assets/icon-twitter.svg";
+import iconWhatsapp from "../../assets/icon-whatsapp.svg";
+import iconMessenger from "../../assets/icon-messenger.svg";
 
-import '../styling/Contact.sass'
-
+import "../styling/Contact.sass";
 
 function About() {
-  const [legal, setLegel] = useState(false)
+  const [showAlert, setShowAlert] = useState(false);
 
-  const openUrl = (url) => {
-    window.open(url, '_blank').focus()
-  }
+  const handleAlertClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setShowAlert(false);
+  };
+
   const facebook = "https://www.facebook.com/sade.sade.908",
     twitter = "https://twitter.com/so3da2001",
-    whatsapp = "tel:201094757535";
-
+    whatsapp = "https://wa.link/hb2cvi";
 
   return (
     <section className="contact container" id="contact">
       <header>
         <h2>Get started</h2>
-        <span>Prepare for your fairy tail love story. Don't raise  expectations.</span>
+        <span>
+          Prepare for your fairy tail love story. Don't raise expectations.
+        </span>
       </header>
-    
+
       <div className="casual contact-mean">
         <Seperator text="Casual queen" />
         <div className="social-media">
-          <Button text="Messenger" icon={iconMessenger} varient="contact-btn" onClickHandler={()=> openUrl(facebook)}/>
-          <Button text="Whatsapp" icon={iconWhatsapp} varient="contact-btn"  onClickHandler={()=> openUrl(whatsapp)}/>
-          <Button text="Twitter" icon={iconTwitter} varient="contact-btn"  onClickHandler={()=> openUrl(twitter)}/>
+          <Button
+            text="Messenger"
+            icon={iconMessenger}
+            varient="contact-btn"
+            onClick={() => openUrl(facebook)}
+          />
+          <Button
+            text="Whatsapp"
+            icon={iconWhatsapp}
+            varient="contact-btn"
+            onClick={() => openUrl(whatsapp)}
+          />
+          <Button
+            text="Twitter"
+            icon={iconTwitter}
+            varient="contact-btn"
+            onClick={() => openUrl(twitter)}
+          />
         </div>
       </div>
 
       <div className="formal contact-mean">
         <Seperator text="Formal queen" />
-        <form id="form" onSubmit={() => console.log("Adham")}>
-            <TextField className="text-field" variant="filled" size="small" label="Queen's Name" type="text" required />
-            <TextField className="text-field"variant="filled" size="small" label="Queen's Email Address" type="email" required/>
-            <TextField className="text-area"variant="filled" size="small" rows="3" multiline label="Say hi" type="text" required/>
-            <FormControlLabel className="checkbox"
-              control={<Checkbox onChange={() => setLegel(!legal) }/>} 
-              label={
-                <span className="checkbox-label">
-                  I'm above the age of <a target="_blank" href="https://www.law.cornell.edu/wex/age_of_majority">legal majority</a>
-                </span>
-              } />
-          <Button id="btn-submit" text="Book a date" disabled={!legal} type="submit"/>
-        </form>
+        <Form onFormSubmitted={() => setShowAlert(true)} />
       </div>
 
+      <Snackbar
+        open={showAlert}
+        autoHideDuration={6000}
+        onClose={handleAlertClose}
+      >
+        <Alert
+          className="alert"
+          severity="success"
+          variant="filled"
+          sx={{ width: "100%" }}
+          onClose={handleAlertClose}
+        >
+          <AlertTitle className="title">Message sent successfully</AlertTitle>
+          Saied will contact you shortly — <strong>Dress up</strong>
+        </Alert>
+      </Snackbar>
     </section>
   );
 }
+
+const openUrl = (url) => {
+  window.open(url, "_blank").focus();
+};
 
 export default About;

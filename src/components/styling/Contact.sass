@@ -8,20 +8,11 @@
             margin: 0 0 0.25rem 0
     .social-media
         +flex(start, center, row, 0.5rem)
-    #form
-        font-size: 75%
-        max-width: 700px
-        +flex(start, stretch, column, 0.5rem)
-        .checkbox
-            font-size: 150%
-            width: fit-content
-            .checkbox-label
-                font-size: 70%
-        .btn
-            align-self: flex-end
-            width: fit-content
-        *
-            font-size: inherit
+    .snackbar, .alert
+        font-size: 60% !important
+    .alert
+        .title
+            font-size: 110%
 
 @media screen and (max-width: 480px)
     .contact

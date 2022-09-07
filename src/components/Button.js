@@ -1,17 +1,35 @@
+import { Fragment } from "react";
 import './styling/Button.sass';
 
 function Button(props){    
     
-    const {className, varient, type, icon, text, alt, disabled} = props;
+    const {className, varient, type, href, icon, text, alt, disabled} = props;
     
-    let varientClass = varient? varient : "default";
+    let varientClass = varient? varient : "default",
+        fullClassName = `btn ${varientClass} ${className? className : ""}`,
+        content = (
+            <Fragment>
+                <span style={{display: !text? "none": "inline-block"}}>{text}</span>
+                { icon && <img src={icon} alt={alt? alt : ""}/> }
+            </Fragment>
+        );
 
+    // Will render either <a> or <button> depending on the user preferences
     return(
-        <button className={`btn ${varientClass} ${className? className : ""}`} 
-            type={type? type : "button"} disabled={disabled}
-            onClick={props.onClickHandler}>
-            <span style={{display: !text? "none": "inline-block"}}>{text}</span>
-            { icon && <img src={icon} alt={alt? alt : ""}/> }
+        href ?
+        <a 
+            className={fullClassName} 
+            disabled={disabled}
+            href={href}>
+            {content}        
+        </a> :
+        
+        <button 
+            className={fullClassName} 
+            disabled={disabled}
+            onClick={props.onClick}
+            type={type? type : "button"} >
+            {content}
         </button>
     )
 }
