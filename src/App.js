@@ -1,19 +1,16 @@
-import glowRed from "./assets/glow-red.png";
-import heroRed from "./assets/saied-red.png";
 import Hero from "./components/Sections/Hero";
 import About from "./components/Sections/About";
 import Contact from "./components/Sections/Contact";
 import Footer from "./components/Sections/Footer";
 import "./App.sass";
-import { Fragment } from "react";
 
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
-     primary: {
+    mode: "dark",
+    primary: {
       main: "#64D1F8",
     },
     secondary: {
@@ -22,7 +19,6 @@ const darkTheme = createTheme({
   },
 });
 
-
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
@@ -30,11 +26,10 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Contact/>
-        <Footer/>
+        <Contact />
+        <Footer />
       </main>
     </ThemeProvider>
-    
   );
 }
 

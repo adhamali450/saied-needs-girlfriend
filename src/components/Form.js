@@ -154,6 +154,7 @@ function Form(props) {
             I'm above the age of{" "}
             <a
               target="_blank"
+              rel="noreferrer noopener"
               href="https://www.law.cornell.edu/wex/age_of_majority"
             >
               legal majority
@@ -182,9 +183,9 @@ function Form(props) {
 // util functions
 const validInput = (inputClass, input) => {
   return {
-    name: input != "",
+    name: input !== "",
     email: validEmail(input),
-    message: input != "",
+    message: input !== "",
   }[inputClass];
 };
 
